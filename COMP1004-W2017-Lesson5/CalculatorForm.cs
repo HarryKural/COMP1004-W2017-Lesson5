@@ -89,5 +89,28 @@ namespace COMP1004_W2017_Lesson5
                 e.Cancel = true;
             }
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Step 1. Create a new Form
+            AboutForm aboutForm = new AboutForm();
+
+            // Step 2. Show the About Form with Show Dialog (a model method to display the form)
+            aboutForm.ShowDialog();
+        }
+
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Step 1. Create a new Form - Options Form
+            OptionsForm optionsForm = new OptionsForm();
+
+            // Step 2. Show the Options Form with Show Dialog (a model method to display the form)
+            optionsForm.ShowDialog();
+        }
     }
 }

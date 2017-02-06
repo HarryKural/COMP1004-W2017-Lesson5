@@ -48,8 +48,17 @@
             this.DivideButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
             this.ResultTextBox = new System.Windows.Forms.TextBox();
+            this.CalculatorMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LogoPictureBox = new System.Windows.Forms.PictureBox();
             this.CalculatorTableLayout.SuspendLayout();
+            this.CalculatorMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +87,7 @@
             this.CalculatorTableLayout.Controls.Add(this.SevenButton, 0, 1);
             this.CalculatorTableLayout.Controls.Add(this.DivideButton, 3, 0);
             this.CalculatorTableLayout.Controls.Add(this.ClearButton, 1, 0);
-            this.CalculatorTableLayout.Location = new System.Drawing.Point(-1, 150);
+            this.CalculatorTableLayout.Location = new System.Drawing.Point(-1, 188);
             this.CalculatorTableLayout.Name = "CalculatorTableLayout";
             this.CalculatorTableLayout.RowCount = 5;
             this.CalculatorTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -311,7 +320,7 @@
             this.ResultTextBox.BackColor = System.Drawing.Color.White;
             this.ResultTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ResultTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResultTextBox.Location = new System.Drawing.Point(2, 99);
+            this.ResultTextBox.Location = new System.Drawing.Point(2, 148);
             this.ResultTextBox.Name = "ResultTextBox";
             this.ResultTextBox.ReadOnly = true;
             this.ResultTextBox.Size = new System.Drawing.Size(294, 37);
@@ -320,10 +329,75 @@
             this.ResultTextBox.Text = "0";
             this.ResultTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // CalculatorMenuStrip
+            // 
+            this.CalculatorMenuStrip.AutoSize = false;
+            this.CalculatorMenuStrip.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalculatorMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.toolsToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.CalculatorMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.CalculatorMenuStrip.Name = "CalculatorMenuStrip";
+            this.CalculatorMenuStrip.Size = new System.Drawing.Size(302, 40);
+            this.CalculatorMenuStrip.TabIndex = 3;
+            this.CalculatorMenuStrip.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(49, 36);
+            this.fileToolStripMenuItem.Text = "&File";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.optionsToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(62, 36);
+            this.toolsToolStripMenuItem.Text = "&Tools";
+            // 
+            // optionsToolStripMenuItem
+            // 
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.optionsToolStripMenuItem.Text = "&Options";
+            this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator5,
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(57, 36);
+            this.helpToolStripMenuItem.Text = "&Help";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(149, 6);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Text = "&About...";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // LogoPictureBox
             // 
             this.LogoPictureBox.Image = global::COMP1004_W2017_Lesson5.Properties.Resources.CalculatorLogo;
-            this.LogoPictureBox.Location = new System.Drawing.Point(2, 3);
+            this.LogoPictureBox.Location = new System.Drawing.Point(2, 55);
             this.LogoPictureBox.Name = "LogoPictureBox";
             this.LogoPictureBox.Size = new System.Drawing.Size(299, 90);
             this.LogoPictureBox.TabIndex = 2;
@@ -332,17 +406,21 @@
             // CalculatorForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(302, 433);
+            this.ClientSize = new System.Drawing.Size(302, 471);
             this.Controls.Add(this.LogoPictureBox);
             this.Controls.Add(this.ResultTextBox);
             this.Controls.Add(this.CalculatorTableLayout);
+            this.Controls.Add(this.CalculatorMenuStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.CalculatorMenuStrip;
             this.MaximizeBox = false;
             this.Name = "CalculatorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CalculatorForm_FormClosing);
             this.CalculatorTableLayout.ResumeLayout(false);
+            this.CalculatorMenuStrip.ResumeLayout(false);
+            this.CalculatorMenuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -372,6 +450,14 @@
         private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.TextBox ResultTextBox;
         private System.Windows.Forms.PictureBox LogoPictureBox;
+        private System.Windows.Forms.MenuStrip CalculatorMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 
